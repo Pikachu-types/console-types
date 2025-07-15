@@ -3,6 +3,11 @@ export const plans = {
   scale: "scale",
 } as const;
 
+export const domains = {
+  live: "live",
+  test: "test",
+} as const;
+
 export const billingType = {
   authentication: "authentication",
   signature: "signature",
@@ -62,7 +67,7 @@ export const productArray: ProductType[] = [products.authentication, products.si
 
 export type VerificationStatus = keyof typeof status;
 export type AppType = keyof typeof appType;
+export type Domain = keyof typeof domains;
 export type ProductType = typeof products[keyof typeof products];
 export type BillingPlans = keyof typeof plans;
 export type BillingCycle = keyof typeof cycle;
-export type BillingType = keyof typeof billingType;

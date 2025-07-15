@@ -1,4 +1,8 @@
 export interface Authorization {
+  customer: {
+    test?: string;
+    live?: string;
+  };
   map: {
     card_type: string;
     channel: string;
