@@ -5,7 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-dist/
+# dist/  # Removed to include compiled files in repository
 build/
 
 # TypeScript
