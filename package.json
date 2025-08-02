@@ -1,19 +1,24 @@
 {
   "name": "console-shared-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared TypeScript types and classes for console applications",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "import": "./dist/esm/index.js",
       "require": "./dist/index.js"
     }
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "npm run build:cjs && npm run build:esm && npm run fix:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "fix:esm": "node scripts/fix-esm-imports.js",
+    "dev": "npm run build && npm run dev:watch",
+    "dev:watch": "tsc --watch",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean"
   },

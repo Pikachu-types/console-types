@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SubscriptionModel = void 0;
-class SubscriptionModel {
+export class SubscriptionModel {
     constructor() {
         this.plan = 'basic';
         this.domain = 'test';
@@ -23,4 +20,3 @@ class SubscriptionModel {
         return { ...this };
     }
 }
-exports.SubscriptionModel = SubscriptionModel;
