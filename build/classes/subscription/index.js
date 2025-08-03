@@ -20,7 +20,8 @@ class SubscriptionModel {
         return JSON.stringify(this);
     }
     toMap() {
-        return { ...this };
+        return Object.assign({}, this);
     }
 }
 exports.SubscriptionModel = SubscriptionModel;
+//# sourceMappingURL=index.js.map

@@ -1,19 +1,15 @@
 {
   "name": "console-shared-types",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Shared TypeScript types and classes for console applications",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/index.js"
-    }
-  },
+  "main": "build/index.js",
+  "files": [
+    "/build"
+  ],
+  "types": "build/index.d.ts",
   "scripts": {
-    "build": "npm run build:cjs && npm run build:esm && npm run fix:esm",
+    "build": "tsc",
+    "build:script": "npm run build:cjs && npm run build:esm && npm run fix:esm",
     "build:cjs": "tsc",
     "build:esm": "tsc -p tsconfig.esm.json",
     "fix:esm": "node scripts/fix-esm-imports.js",
@@ -28,12 +24,17 @@
     "console",
     "shared"
   ],
-  "author": "",
+  "author": "Jackmay Confidence",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Finsel-DGI/console-shared-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Finsel-DGI/console-shared-types/issues"
+  },
+  "homepage": "https://github.com/Finsel-DGI/console-shared-types#readme",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.0.0"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 } 

@@ -41,3 +41,4 @@ exports.businessTypes = {
     enterprise: "enterprise",
 };
 exports.productArray = [exports.products.authentication, exports.products.signature];
+//# sourceMappingURL=enums.js.map
