@@ -1,13 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.unixTimeStampNow = exports.generateRandomAlphaNumeric = exports.strEnum = void 0;
+exports.strEnum = strEnum;
+exports.generateRandomAlphaNumeric = generateRandomAlphaNumeric;
+exports.unixTimeStampNow = unixTimeStampNow;
+exports.makeAKeyFromIdentity = makeAKeyFromIdentity;
 function strEnum(o) {
     return o.reduce((res, key) => {
         res[key] = key;
         return res;
     }, Object.create(null));
 }
-exports.strEnum = strEnum;
 /**
  * Random string generator helper
  * @param {number} length
@@ -22,10 +24,16 @@ function generateRandomAlphaNumeric(length) {
     }
     return result;
 }
-exports.generateRandomAlphaNumeric = generateRandomAlphaNumeric;
 function unixTimeStampNow() {
     const now = new Date();
     return Math.floor(now.getTime() / 1000);
 }
-exports.unixTimeStampNow = unixTimeStampNow;
+function makeAKeyFromIdentity(id) {
+    if (!id.includes("_"))
+        throw new Error("Identity is not recognised: missing signature element.");
+    const key = id.split("_")[1];
+    if (key.length !== 36)
+        throw new Error("Invalid identity provided");
+    return key.replace(/-/g, "");
+}
 //# sourceMappingURL=system.js.map

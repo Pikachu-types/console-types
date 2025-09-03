@@ -1,4 +1,4 @@
-export declare type DocumentSchema = {
+export type DocumentSchema = {
     id: string;
     iat: Date | null | string | number;
     created?: Date | null | string | number;

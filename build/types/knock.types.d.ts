@@ -25,8 +25,8 @@ export declare const NOTIFICATION_CATEGORIES: {
     readonly SYSTEM_MAINTENANCE: "system-maintenance";
     readonly SYSTEM_UPDATE: "system-update";
 };
-export declare type NotificationCategory = typeof NOTIFICATION_CATEGORIES[keyof typeof NOTIFICATION_CATEGORIES];
-export declare type RecipientMap = {
+export type NotificationCategory = typeof NOTIFICATION_CATEGORIES[keyof typeof NOTIFICATION_CATEGORIES];
+export type RecipientMap = {
     id: string;
     email: string;
     name: string;

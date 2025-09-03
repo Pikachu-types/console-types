@@ -26,3 +26,11 @@ export function unixTimeStampNow(): number {
   const now = new Date();
   return Math.floor(now.getTime() / 1000);
 }
+
+
+export function makeAKeyFromIdentity(id: string) {
+  if (!id.includes("_")) throw new Error("Identity is not recognised: missing signature element.");
+  const key = id.split("_")[1];
+  if (key.length !== 36) throw new Error("Invalid identity provided");
+  return key.replace(/-/g, "");
+}

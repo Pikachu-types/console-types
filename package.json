@@ -1,12 +1,24 @@
 {
   "name": "@pikachu/console-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Shared typeScript types and classes for pasby console",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js",
+      "require": "./build/index.js"
+    },
+    "./server": {
+      "types": "./build/server/index.d.ts",
+      "import": "./build/server/index.js",
+      "require": "./build/server/index.js"
+    }
+  },
   "files": [
     "/build"
   ],
-  "types": "build/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build:script": "npm run build:cjs && npm run build:esm && npm run fix:esm",
@@ -35,6 +47,11 @@
   "homepage": "https://github.com/Pikachu-types/console-types.git#readme",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^24.3.0",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "generate-api-key": "^1.0.2",
+    "labs-sharable": "^1.7.3"
   }
-} 
+}

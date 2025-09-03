@@ -1,6 +1,6 @@
 import { Consumer, DocumentSchema } from "../..";
-export declare type OrgRequest = {
+export type OrgRequest = {
     org: string;
     uid: string;
 } & DocumentSchema;
-export declare type Organization = Consumer;
+export type Organization = Consumer;

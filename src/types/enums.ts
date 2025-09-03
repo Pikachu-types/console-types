@@ -1,5 +1,21 @@
 import { strEnum } from "../utils/system";
 
+/**
+ * Api key prefix
+ */
+export enum ApiKeyPrefix {
+  live = "bk-live_",
+  test = "bk-test_",
+}
+
+/**
+ * AppType secret key reference on BankID
+ */
+export enum AppTypeSecretRef {
+  production = "prd_",
+  test = "snb_",
+}
+
 export const collections = {
   console_user: "console_user",
   apps: "apps", // sub doc

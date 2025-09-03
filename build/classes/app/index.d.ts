@@ -1,7 +1,7 @@
 import { ClientScope, ConsumptionType, DocumentSchema, DomainType, TechnologyType, VerificationStatus } from "../..";
 import { Consumer } from "../consumer";
 import { Model } from "../model";
-export declare type App = {
+export type App = {
     owner: string;
     technology: {
         type: TechnologyType;

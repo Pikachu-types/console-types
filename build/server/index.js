@@ -1,6 +1,6 @@
 "use strict";
-// Classes index file
-// Export all class definitions from this directory
+// Server-side exports for @pikachu/console-types/server
+// These exports contain Node.js specific functionality that should not be used on the client side
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -16,10 +16,10 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./consumer/index"), exports);
-__exportStar(require("./console-user/index"), exports);
-__exportStar(require("./app/index"), exports);
-__exportStar(require("./subscription/index"), exports);
-__exportStar(require("./invitation/index"), exports);
-__exportStar(require("./logs/index"), exports);
+// Export crypto utilities
+__exportStar(require("./crypto"), exports);
+__exportStar(require("./func-util"), exports);
+// Re-export all client-safe types and classes for server-side usage
+__exportStar(require("../types"), exports);
+__exportStar(require("../classes"), exports);
 //# sourceMappingURL=index.js.map

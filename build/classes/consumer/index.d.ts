@@ -1,6 +1,6 @@
 import { DomainType, BusinessType, DocumentSchema, VerificationStatus, DashboardRoles } from "../..";
 import { Model } from "../model";
-export declare type Consumer = {
+export type Consumer = {
     name: string;
     image?: string;
     slug: string;

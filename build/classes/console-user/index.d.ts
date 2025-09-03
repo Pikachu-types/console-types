@@ -1,6 +1,6 @@
 import { AuthenticationProvider, DocumentSchema } from "../..";
 import { Model } from "../model";
-export declare type User = {
+export type User = {
     naming: {
         first: string;
         middle?: string;

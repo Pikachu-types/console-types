@@ -1,3 +1,17 @@
+/**
+ * Api key prefix
+ */
+export declare enum ApiKeyPrefix {
+    live = "bk-live_",
+    test = "bk-test_"
+}
+/**
+ * AppType secret key reference on BankID
+ */
+export declare enum AppTypeSecretRef {
+    production = "prd_",
+    test = "snb_"
+}
 export declare const collections: {
     readonly console_user: "console_user";
     readonly apps: "apps";
@@ -38,16 +52,16 @@ export declare const products: {
     readonly authentication: "authentication";
     readonly signature: "signature";
 };
-export declare type TCountry = {
+export type TCountry = {
     name: string;
     dial: string;
     code: string;
 };
-export declare type TAppCategory = {
+export type TAppCategory = {
     name: string;
     key: string;
 };
-export declare type TSubPlan = {
+export type TSubPlan = {
     product: "authentication" | "signature";
     plan: "basic" | "scale";
     period: "monthly" | "yearly";
@@ -112,17 +126,17 @@ export declare const productionDomain: {
     production: "production";
 };
 export declare const productArray: ProductType[];
-export declare type DashboardRoles = keyof typeof roles;
-export declare type ClientScope = keyof typeof scopes;
-export declare type EnvironmentType = keyof typeof productionDomain;
-export declare type VerificationStatus = keyof typeof status;
-export declare type BusinessType = keyof typeof businessType;
-export declare type DomainType = keyof typeof productionDomain;
-export declare type Domain = keyof typeof domains;
-export declare type ProductType = typeof products[keyof typeof products];
-export declare type BillingPlans = keyof typeof plans;
-export declare type BillingCycle = keyof typeof cycle;
-export declare type ConsumptionType = keyof typeof consumptions;
-export declare type TechnologyType = keyof typeof technologyType;
-export declare type AuthenticationProvider = keyof typeof authProvider;
+export type DashboardRoles = keyof typeof roles;
+export type ClientScope = keyof typeof scopes;
+export type EnvironmentType = keyof typeof productionDomain;
+export type VerificationStatus = keyof typeof status;
+export type BusinessType = keyof typeof businessType;
+export type DomainType = keyof typeof productionDomain;
+export type Domain = keyof typeof domains;
+export type ProductType = typeof products[keyof typeof products];
+export type BillingPlans = keyof typeof plans;
+export type BillingCycle = keyof typeof cycle;
+export type ConsumptionType = keyof typeof consumptions;
+export type TechnologyType = keyof typeof technologyType;
+export type AuthenticationProvider = keyof typeof authProvider;
 export {};

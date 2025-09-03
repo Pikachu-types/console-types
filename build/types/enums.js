@@ -1,10 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productArray = exports.productionDomain = exports.environmentType = exports.dashboards = exports.authProvider = exports.businessType = exports.consumptions = exports.scopes = exports.products = exports.roles = exports.technologyType = exports.cycle = exports.billingType = exports.domains = exports.plans = exports.collections = void 0;
+exports.productArray = exports.productionDomain = exports.environmentType = exports.dashboards = exports.authProvider = exports.businessType = exports.consumptions = exports.scopes = exports.products = exports.roles = exports.technologyType = exports.cycle = exports.billingType = exports.domains = exports.plans = exports.collections = exports.AppTypeSecretRef = exports.ApiKeyPrefix = void 0;
 const system_1 = require("../utils/system");
+/**
+ * Api key prefix
+ */
+var ApiKeyPrefix;
+(function (ApiKeyPrefix) {
+    ApiKeyPrefix["live"] = "bk-live_";
+    ApiKeyPrefix["test"] = "bk-test_";
+})(ApiKeyPrefix || (exports.ApiKeyPrefix = ApiKeyPrefix = {}));
+/**
+ * AppType secret key reference on BankID
+ */
+var AppTypeSecretRef;
+(function (AppTypeSecretRef) {
+    AppTypeSecretRef["production"] = "prd_";
+    AppTypeSecretRef["test"] = "snb_";
+})(AppTypeSecretRef || (exports.AppTypeSecretRef = AppTypeSecretRef = {}));
 exports.collections = {
     console_user: "console_user",
-    apps: "apps",
+    apps: "apps", // sub doc
     consumers: "consumers",
     orgRequests: "orgRequests",
 };
