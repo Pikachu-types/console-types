@@ -1,3 +1,11 @@
+export type DocumentSchema = {
+  id: string; // Unique identifier metadata
+  iat: Date | null | string | number;
+  created?: Date | null | string | number;
+  lut?: Date | null | string | number; // Timestamp for last update
+}
+
+
 export interface Authorization {
   customer: {
     test?: string;

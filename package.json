@@ -1,7 +1,7 @@
 {
-  "name": "console-shared-types",
+  "name": "@pikachu/console-types",
   "version": "1.0.4",
-  "description": "Shared TypeScript types and classes for console applications",
+  "description": "Shared typeScript types and classes for pasby console",
   "main": "build/index.js",
   "files": [
     "/build"
@@ -27,12 +27,12 @@
   "author": "Jackmay Confidence",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Finsel-DGI/console-shared-types.git"
+    "url": "git+https://github.com/Pikachu-types/console-types.git"
   },
   "bugs": {
-    "url": "https://github.com/Finsel-DGI/console-shared-types/issues"
+    "url": "https://github.com/Pikachu-types/console-types.git/issues"
   },
-  "homepage": "https://github.com/Finsel-DGI/console-shared-types#readme",
+  "homepage": "https://github.com/Pikachu-types/console-types.git#readme",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.0.0"

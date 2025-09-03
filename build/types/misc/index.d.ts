@@ -1,3 +1,9 @@
+export declare type DocumentSchema = {
+    id: string;
+    iat: Date | null | string | number;
+    created?: Date | null | string | number;
+    lut?: Date | null | string | number;
+};
 export interface Authorization {
     customer: {
         test?: string;

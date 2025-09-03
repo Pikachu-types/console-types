@@ -1,6 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productArray = exports.businessTypes = exports.products = exports.appType = exports.roles = exports.cycle = exports.billingType = exports.domains = exports.plans = void 0;
+exports.productArray = exports.productionDomain = exports.environmentType = exports.dashboards = exports.authProvider = exports.businessType = exports.consumptions = exports.scopes = exports.products = exports.roles = exports.technologyType = exports.cycle = exports.billingType = exports.domains = exports.plans = exports.collections = void 0;
+const system_1 = require("../utils/system");
+exports.collections = {
+    console_user: "console_user",
+    apps: "apps",
+    consumers: "consumers",
+    orgRequests: "orgRequests",
+};
 exports.plans = {
     basic: "basic",
     scale: "scale",
@@ -17,6 +24,10 @@ exports.cycle = {
     monthly: "monthly",
     yearly: "yearly",
 };
+exports.technologyType = {
+    backend: "Backend web/server",
+    frontend: "Frontend and mobile",
+};
 const status = {
     verified: "verified",
     waiting: "waiting",
@@ -24,21 +35,61 @@ const status = {
     stale: "stale",
 };
 exports.roles = {
-    owner: "owner",
-    admin: "admin",
-    viewer: "viewer"
-};
-exports.appType = {
-    backend: "backend",
-    frontend: "frontend",
+    manager: "manager",
+    viewer: "viewer",
 };
 exports.products = {
     authentication: "authentication",
     signature: "signature",
 };
-exports.businessTypes = {
-    solopreneur: "solopreneur",
-    enterprise: "enterprise",
+exports.scopes = {
+    "identification:same": "identification:same",
+    "identification:different": "identification:another",
+    "identification:wildcard": "identification:wildcard",
+    "signing:wildcard": "signing:wildcard",
+    "signing:different": "signing:another",
+    "signing:same": "signing:same",
+    "flow:ping": "flow:ping",
+    "flow:authorize": "flow:authorize",
+    "flow:poll": "flow:poll",
+    "flow:cancel": "flow:cancel",
+    "document:sign": "document:sign",
+    /**
+     * For interface use
+     */
+    "document:review": "document:review",
+    "identity:read": "identity:read",
+    "identity:write": "identity:write",
+    "payment:read": "payment:read",
+    "session:host": "session:host",
+    /**
+     * Hosted OIDC token swap
+     */
+    "session:shake": "session:shake",
+    /**
+     * Check if oidc token is still active
+     */
+    "session:validate": "session:validate"
 };
+exports.consumptions = {
+    auth: "Authentication",
+    sign: "e-Signatures",
+    all: "Both"
+};
+exports.businessType = {
+    llc: "Limited company",
+    sole: "Sole trader",
+    indie: "Indie Firm (unregistered)",
+};
+exports.authProvider = {
+    email: "Email address",
+    google: "google.com",
+    apple: "apple.com",
+    pasby: "pasby e-ID (National Identification Number)",
+    pasbyMail: "pasby and email authentication"
+};
+exports.dashboards = (0, system_1.strEnum)(['administrator', 'vendor', 'consumer']);
+exports.environmentType = (0, system_1.strEnum)(['live', 'test']);
+exports.productionDomain = (0, system_1.strEnum)(['production', 'test']);
 exports.productArray = [exports.products.authentication, exports.products.signature];
 //# sourceMappingURL=enums.js.map
