@@ -22,6 +22,7 @@ exports.collections = {
     console_user: "console_user",
     apps: "apps", // sub doc
     consumers: "consumers",
+    billingEvents: "billingEvents", // in separate firebase firestore database adjacent to default
     orgRequests: "orgRequests",
 };
 exports.plans = {

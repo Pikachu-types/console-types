@@ -6,3 +6,4 @@ export * from './types';
 
 // Export classes
 export * from './classes';
+export * from './utils/public';

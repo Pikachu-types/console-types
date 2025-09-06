@@ -20,4 +20,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./types"), exports);
 // Export classes
 __exportStar(require("./classes"), exports);
+__exportStar(require("./utils/public"), exports);
 //# sourceMappingURL=index.js.map

@@ -1,4 +1,4 @@
-import { Consumer, DocumentSchema } from "../..";
+import { DocumentSchema } from "../..";
 
 export type Log = {
   event: string;
