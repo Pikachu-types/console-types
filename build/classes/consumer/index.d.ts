@@ -84,16 +84,7 @@ export type Consumer = {
     image?: string;
     slug: string;
     information?: {
-        legalName: string;
-        domain: string;
-        rcNumber: string;
         type: BusinessType;
-        vat?: string;
-        description: string;
-        email: string;
-        address: string;
-        country: string;
-        industry: string;
         status: VerificationStatus;
     };
     apis?: {

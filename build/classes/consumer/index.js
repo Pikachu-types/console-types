@@ -28,16 +28,7 @@ class ConsumerModel extends model_1.Model {
     }
     static initiateDetails() {
         return {
-            legalName: "",
-            domain: "",
-            rcNumber: "",
-            vat: "",
             type: 'llc',
-            description: "",
-            email: "",
-            address: "",
-            country: "",
-            industry: "",
             status: 'stale',
         };
     }
