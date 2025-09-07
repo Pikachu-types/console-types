@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.removeAllIdentifiers = void 0;
 exports.strEnum = strEnum;
 exports.generateRandomAlphaNumeric = generateRandomAlphaNumeric;
 exports.unixTimeStampNow = unixTimeStampNow;
@@ -28,6 +29,12 @@ function unixTimeStampNow() {
     const now = new Date();
     return Math.floor(now.getTime() / 1000);
 }
+const removeAllIdentifiers = function (url) {
+    if (url === undefined || url === null || !url.includes("_"))
+        return '';
+    return url.split("_")[1];
+};
+exports.removeAllIdentifiers = removeAllIdentifiers;
 function makeAKeyFromIdentity(id) {
     if (!id.includes("_"))
         throw new Error("Identity is not recognised: missing signature element.");

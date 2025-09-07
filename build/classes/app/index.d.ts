@@ -1,6 +1,13 @@
 import { ClientScope, ConsumptionType, DocumentSchema, DomainType, TechnologyType, VerificationStatus } from "../..";
 import { Consumer } from "../consumer";
 import { Model } from "../model";
+export interface SecretSchema {
+    created: number;
+    id: string;
+    lut?: number;
+    revoked: boolean;
+    secret: string;
+}
 export type App = {
     owner: string;
     technology: {
@@ -23,6 +30,7 @@ export type App = {
     };
     scopes?: ClientScope[];
     urls: string[];
+    secrets?: SecretSchema[];
     keys?: Consumer['keys'];
 } & DocumentSchema;
 export declare class AppModel extends Model<App> {

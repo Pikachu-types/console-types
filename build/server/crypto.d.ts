@@ -17,5 +17,6 @@ export declare class CryptoUtils {
      * @return {string} returns content.
      */
     static decrypt(hash: CipherType, key: string): string;
+    static decryptSeverMessage(id: string, data: string): string;
     static hashAPIKey(key: string): string;
 }

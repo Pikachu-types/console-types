@@ -2,6 +2,10 @@
 
 A TypeScript package containing shared types and classes for console applications. This package supports both **CommonJS** and **ES Modules** for maximum compatibility, with **dual export support** for client-side and server-side usage.
 
+## Installation
+
+npm i git+https://github.com/Pikachu-types/console-types.git
+
 ## Project Structure
 
 ```

@@ -119,28 +119,6 @@ export type Consumer = {
     public: string;
     private?: string | null;
   },
-  stats?: {
-    production: {
-      /**
-       * Monthly eSign count
-       */
-      mec: number;
-      /**
-       * Monthly auth count
-       */
-      mac: number;
-    },
-    test: {
-      /**
-       * Monthly eSign count
-      */
-      mec: number;
-      /**
-       * Monthly auth count
-       */
-      mac: number;
-    }
-  },
   owner: string;
   members: {
     [key: string]: {

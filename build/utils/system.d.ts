@@ -8,4 +8,5 @@ export declare function strEnum<T extends string>(o: Array<T>): {
  */
 export declare function generateRandomAlphaNumeric(length: number): string;
 export declare function unixTimeStampNow(): number;
+export declare const removeAllIdentifiers: (url: string | undefined) => string;
 export declare function makeAKeyFromIdentity(id: string): string;

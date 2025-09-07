@@ -1,4 +1,5 @@
 import * as crypto from 'crypto';
+import { removeAllIdentifiers } from '../utils/system';
 
 export interface CipherType {
   iv: string;
@@ -39,6 +40,32 @@ export class CryptoUtils {
       Buffer.from(hash.content, "hex")),
     decipher.final()]);
 
+    return decrypted.toString();
+  }
+
+  public static decryptSeverMessage(id: string, data: string) {
+    const revertToType = (source: string) => {
+      const cipher = source.split("-vi");
+
+      if (cipher.length != 2) {
+        return;
+      }
+
+      return {
+        iv: cipher[1].replace("(", "").replace(")", ""),
+        content: cipher[0],
+      };
+    }
+
+    const hash = revertToType(data);
+    if (!hash) return "";
+    const key = removeAllIdentifiers(id).replace(/-/g, "");
+    const decipher = crypto.createDecipheriv("aes-256-ctr",
+      key, Buffer.from(hash.iv, "hex"));
+    const decrypted = Buffer.
+      concat([decipher.update(
+        Buffer.from(hash.content, "hex")),
+      decipher.final()]);
     return decrypted.toString();
   }
 

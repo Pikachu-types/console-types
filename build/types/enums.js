@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productArray = exports.productionDomain = exports.environmentType = exports.dashboards = exports.authProvider = exports.businessType = exports.consumptions = exports.scopes = exports.products = exports.roles = exports.technologyType = exports.cycle = exports.billingType = exports.domains = exports.plans = exports.collections = exports.AppTypeSecretRef = exports.ApiKeyPrefix = void 0;
+exports.productArray = exports.productionDomain = exports.environmentType = exports.dashboards = exports.authProvider = exports.businessType = exports.consumptions = exports.scopes = exports.products = exports.roles = exports.status = exports.technologyType = exports.cycle = exports.billingType = exports.domains = exports.plans = exports.collections = exports.AppTypeSecretRef = exports.ApiKeyPrefix = void 0;
 const system_1 = require("../utils/system");
 /**
  * Api key prefix
@@ -45,11 +45,11 @@ exports.technologyType = {
     backend: "Backend web/server",
     frontend: "Frontend and mobile",
 };
-const status = {
-    verified: "verified",
-    waiting: "waiting",
-    unverified: "unverified",
-    stale: "stale",
+exports.status = {
+    verified: "Verified",
+    waiting: "Waiting",
+    unverified: "Unverified",
+    stale: "Stale",
 };
 exports.roles = {
     manager: "manager",

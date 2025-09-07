@@ -49,11 +49,11 @@ export const technologyType = {
   frontend: "Frontend and mobile",
 } as const
 
-const status = {
-  verified: "verified",
-  waiting: "waiting",
-  unverified: "unverified",
-  stale: "stale",
+export const status = {
+  verified: "Verified",
+  waiting: "Waiting",
+  unverified: "Unverified",
+  stale: "Stale",
 } as const
 
 

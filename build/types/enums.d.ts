@@ -39,11 +39,11 @@ export declare const technologyType: {
     readonly backend: "Backend web/server";
     readonly frontend: "Frontend and mobile";
 };
-declare const status: {
-    readonly verified: "verified";
-    readonly waiting: "waiting";
-    readonly unverified: "unverified";
-    readonly stale: "stale";
+export declare const status: {
+    readonly verified: "Verified";
+    readonly waiting: "Waiting";
+    readonly unverified: "Unverified";
+    readonly stale: "Stale";
 };
 export declare const roles: {
     readonly manager: "manager";
@@ -140,4 +140,3 @@ export type BillingCycle = keyof typeof cycle;
 export type ConsumptionType = keyof typeof consumptions;
 export type TechnologyType = keyof typeof technologyType;
 export type AuthenticationProvider = keyof typeof authProvider;
-export {};

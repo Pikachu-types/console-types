@@ -35,6 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CryptoUtils = void 0;
 const crypto = __importStar(require("crypto"));
+const system_1 = require("../utils/system");
 class CryptoUtils {
     /**
      * Encrypt function
@@ -60,6 +61,27 @@ class CryptoUtils {
     static decrypt(hash, key) {
         const decipher = crypto.createDecipheriv("aes-256-ctr", key, Buffer.from(hash.iv, "hex"));
         const decrypted = Buffer.concat([decipher.update(Buffer.from(hash.content, "hex")),
+            decipher.final()]);
+        return decrypted.toString();
+    }
+    static decryptSeverMessage(id, data) {
+        const revertToType = (source) => {
+            const cipher = source.split("-vi");
+            if (cipher.length != 2) {
+                return;
+            }
+            return {
+                iv: cipher[1].replace("(", "").replace(")", ""),
+                content: cipher[0],
+            };
+        };
+        const hash = revertToType(data);
+        if (!hash)
+            return "";
+        const key = (0, system_1.removeAllIdentifiers)(id).replace(/-/g, "");
+        const decipher = crypto.createDecipheriv("aes-256-ctr", key, Buffer.from(hash.iv, "hex"));
+        const decrypted = Buffer.
+            concat([decipher.update(Buffer.from(hash.content, "hex")),
             decipher.final()]);
         return decrypted.toString();
     }

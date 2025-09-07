@@ -27,6 +27,10 @@ export function unixTimeStampNow(): number {
   return Math.floor(now.getTime() / 1000);
 }
 
+export const removeAllIdentifiers = function (url: string | undefined) {
+  if (url === undefined || url === null || !url.includes("_")) return '';
+  return url.split("_")[1];
+}
 
 export function makeAKeyFromIdentity(id: string) {
   if (!id.includes("_")) throw new Error("Identity is not recognised: missing signature element.");

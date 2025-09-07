@@ -3,6 +3,14 @@ import { AUTH_CLIENT_SCOPE, SIGN_CLIENT_SCOPE } from "../../utils/constants";
 import { Consumer } from "../consumer";
 import { Model } from "../model";
 
+export interface SecretSchema {
+  created: number;
+  id: string;
+  lut ?: number;
+  revoked: boolean,
+    secret: string;
+}
+
 export type App = {
   owner: string;
   technology: {
@@ -25,6 +33,7 @@ export type App = {
   };
   scopes?: ClientScope[];
   urls: string[];
+  secrets?: SecretSchema[],
   keys?: Consumer['keys'];
 } & DocumentSchema;
 
