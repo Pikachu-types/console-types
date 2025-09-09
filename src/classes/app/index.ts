@@ -61,4 +61,8 @@ export class AppModel extends Model<App> {
       this.schema.scopes.push("document:sign");
     }
   }
+
+  public static findApp(list: App[], id: string): App | null {
+    return list.find(app => app.id === id) || null;
+  }
 }

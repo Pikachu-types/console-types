@@ -35,4 +35,5 @@ export type App = {
 } & DocumentSchema;
 export declare class AppModel extends Model<App> {
     assignScopes(): void;
+    static findApp(list: App[], id: string): App | null;
 }

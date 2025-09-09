@@ -97,6 +97,7 @@ export type Consumer = {
     type: BusinessType,
     status: VerificationStatus,
   };
+  apiKey?: string;
   apis?: {
     live: string;
     test: string;

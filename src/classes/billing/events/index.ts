@@ -33,6 +33,7 @@ export type BillingEvent = {
   document_id?: string; // alias to requestId (extension exposes document_id)
   consumerId?: string; // bcn_xxx
   appId?: string;      // app_xxx
+  sandbox?: boolean;
   userId?: string | null; // bid_xxx or null
   eventType: string;   // "request.created" | "request.updated" | "request.deleted"
   eventSubType?: string; // "auth_attempt" | "signature" | "onsession" | "user_assigned" ...

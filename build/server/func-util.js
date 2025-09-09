@@ -18,6 +18,7 @@ class FunctionUtility {
             live: this.bankidCipherString(args.cipher, consumer.apis.live),
             test: this.bankidCipherString(args.cipher, consumer.apis.test),
         };
+        consumer.apiKey = consumer.apis.live;
         return consumer;
     }
     static bankidCipherString(cipherKey, source) {

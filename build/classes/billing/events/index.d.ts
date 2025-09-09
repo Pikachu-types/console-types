@@ -28,6 +28,7 @@ export type BillingEvent = {
     document_id?: string;
     consumerId?: string;
     appId?: string;
+    sandbox?: boolean;
     userId?: string | null;
     eventType: string;
     eventSubType?: string;

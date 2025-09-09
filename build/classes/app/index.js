@@ -25,6 +25,9 @@ class AppModel extends model_1.Model {
             this.schema.scopes.push("document:sign");
         }
     }
+    static findApp(list, id) {
+        return list.find(app => app.id === id) || null;
+    }
 }
 exports.AppModel = AppModel;
 //# sourceMappingURL=index.js.map
