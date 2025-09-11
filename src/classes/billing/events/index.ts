@@ -51,6 +51,19 @@ export type BillingEvent = {
   requestPayload?: Record<string, unknown>;
 };
 
+export type BillingStatements = {
+  id: string;
+  consumer: string;
+  month: string;
+  month_ts: number;
+  billableSignatures: number;
+  billableAuths: number;
+  totalBillable: number;
+  status: "draft" | "handled" | "failed";
+  created: number;
+  lut?: number;
+};
+
 
 export class BillingEventModel extends Model<TBillingEvent> {
 }

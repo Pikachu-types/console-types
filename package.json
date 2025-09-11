@@ -27,7 +27,7 @@
     "fix:esm": "node scripts/fix-esm-imports.js",
     "dev": "npm run build && npm run dev:watch",
     "dev:watch": "tsc --watch",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf build",
     "prebuild": "npm run clean"
   },
   "keywords": [

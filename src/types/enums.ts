@@ -20,8 +20,11 @@ export const collections = {
   console_user: "console_user",
   apps: "apps", // sub doc
   consumers: "consumers",
+  creditTransactions: "creditTransactions",
   billingEvents: "billingEvents", // in separate firebase firestore database adjacent to default
   orgRequests: "orgRequests",
+  creditsLedger: "creditsLedger",
+  billingStatements: "billingStatements",
 } as const;
 
 export const plans = {

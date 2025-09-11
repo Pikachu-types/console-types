@@ -16,8 +16,11 @@ export declare const collections: {
     readonly console_user: "console_user";
     readonly apps: "apps";
     readonly consumers: "consumers";
+    readonly creditTransactions: "creditTransactions";
     readonly billingEvents: "billingEvents";
     readonly orgRequests: "orgRequests";
+    readonly creditsLedger: "creditsLedger";
+    readonly billingStatements: "billingStatements";
 };
 export declare const plans: {
     readonly basic: "basic";

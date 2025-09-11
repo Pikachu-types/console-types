@@ -21,3 +21,22 @@ export interface Authorization {
     };
     keep: string;
 }
+export interface MethodItems {
+    default: {
+        type: string;
+        details: Details;
+        identifier: string;
+    };
+    methods: {
+        type: string;
+        details: Details;
+        identifier: string;
+    }[];
+}
+interface Details {
+    brand: string;
+    exp_month: number;
+    exp_year: number;
+    last4: string;
+}
+export {};

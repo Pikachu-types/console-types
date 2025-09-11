@@ -83,7 +83,27 @@ export type Consumer = {
     name: string;
     image?: string;
     slug: string;
+    billing?: {
+        credits: {
+            balance: number;
+            firstTopUpAt?: number;
+        };
+        goodStanding: boolean;
+        providers?: {
+            [key: string]: null | {
+                live?: {
+                    customer: string;
+                    iat: number;
+                };
+                test?: {
+                    customer: string;
+                    iat: number;
+                };
+            };
+        };
+    };
     information?: {
+        taxID?: string;
         type: BusinessType;
         status: VerificationStatus;
     };
@@ -92,7 +112,6 @@ export type Consumer = {
         live: string;
         test: string;
     };
-    usage?: number;
     contact: {
         email: string;
         phone?: string;
@@ -112,6 +131,7 @@ export type Consumer = {
         mandatory: boolean;
         marketing: boolean;
     };
+    demoAccount?: boolean;
 } & DocumentSchema;
 export declare class ConsumerModel extends Model<Consumer> {
     hasApiKeys(): boolean;
