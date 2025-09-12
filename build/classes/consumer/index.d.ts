@@ -83,6 +83,12 @@ export type Consumer = {
     name: string;
     image?: string;
     slug: string;
+    onboarding?: {
+        usage: {
+            authentication: boolean;
+            signatures: boolean;
+        };
+    };
     billing?: {
         credits: {
             balance: number;

@@ -12,7 +12,6 @@ export function formatMonthPeriod(dateString: string): string {
   const [year, month] = dateString.split('-');
   const monthIndex = parseInt(month, 10) - 1; // Convert to 0-based month index
   
-  const date = new Date(parseInt(year, 10), monthIndex);
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'

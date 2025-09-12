@@ -17,7 +17,7 @@ export type IdentificationRequest = {
   id: string;
   consumer: string;
   app: string;
-  mode: string;
+  mode: "identification" | "signature";
   action: string;
   payload: string;
   iat: number;
